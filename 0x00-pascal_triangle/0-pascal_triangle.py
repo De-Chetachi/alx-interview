@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''this module contains a function(pascal_triangle)
 that returns a paschals triangle'''
 
