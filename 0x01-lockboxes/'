@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+'''this module contains a function canUnlockAll
+the function takes in a list of locked boxex and finds out if the keys to all the boxes are available in the boxes'''
+
+
+def canUnlockAll(boxes):
+    ''''''
+
+    keys = set()
+    for box in boxes:
+        keys.update(box)
+    print(keys)
