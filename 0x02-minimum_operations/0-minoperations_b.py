@@ -17,6 +17,17 @@ def is_prime(n):
     return True
 
 
+def first_prime(n):
+    '''returns the first prime factor on a number'''
+    if n <= 1:
+        return 0
+    limit = int(sqrt(n)) + 1
+    for i in range(2, limit):
+        if is_prime(i) and n % i == 0:
+            return (i)
+    return n
+
+
 def minOperations(n):
     '''
     returns the minimum number of operations required to achiev
@@ -26,21 +37,16 @@ def minOperations(n):
     return: minimum number of operations an integer'''
     if n <= 1:
         return 0
-
     primes = []
-    if is_prime(n):
-        primes.append(n)
-        primes.append(1)
-        return int(sum(primes))
-
+    factors = False
     while 1:
-        limit = int(sqrt(n)) + 1
-        for i in range(2, limit):
-            if is_prime(i) and n % i == 0:
-                primes.append(i)
-                break
-        n = n / i
-        if is_prime(n):
-            primes.append(n)
+        new_prime_factor = first_prime(n)
+        if new_prime_factor < n:
+            factors = True
+        primes.append(new_prime_factor)
+        if new_prime_factor == n:
             break
+        n = n / new_prime_factor
+    if not factors:
+        primes.append(1)
     return int(sum(primes))
