@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''a script that reads from stdin
 parses the output and logs expected result'''
+
+
 import sys
 import re
 from datetime import datetime
