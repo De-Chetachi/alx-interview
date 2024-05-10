@@ -9,7 +9,7 @@ from signal import signal, SIGINT
 
 
 if __name__ == "__main__":
-    pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - \[.*\] \"GET\s?\/projects'
+    pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} ?- ?\[.*\] \"GET\s?\/projects'
     pattern += r'\/260 HTTP\/1\.1\" (\d{3}) (\d{1,})'
     total_file_size = 0
     stat_dict = {}
