@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-'''a script that reads from stdin
-parses the output and logs expected result'''
-
-
 import sys
 import re
 from datetime import datetime
 from signal import signal, SIGINT
+'''
+a script that reads from stdin
+parses the output and logs expected result
+'''
 
 
 # re.fullmatch(pattern, string, flags=0)
