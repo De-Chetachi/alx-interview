@@ -34,4 +34,3 @@ def validUTF8(data):
         else:
             index += 1
     return True
-
