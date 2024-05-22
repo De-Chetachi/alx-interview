@@ -21,7 +21,6 @@ def validUTF8(data):
             break
         number = data[index]
         sig = sigbits(number)
-        print(sig)
         if sig == 1:
             return False
         for j in range(index + 1, index + sig):
