@@ -17,6 +17,6 @@ def island_perimeter(grid):
                         parimeter -= 2
                     if grid[i + 1][j]:
                         parimeter -= 2
-                except indexError:
+                except IndexError:
                     pass
     return parimeter
